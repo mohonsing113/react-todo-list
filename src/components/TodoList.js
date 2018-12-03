@@ -4,22 +4,13 @@ import Todo from './Todo.js'
 
 class TodoList extends Component{
 
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputValue: "",todos:[]
-    };
-
-  }
-
   state = { inputValue: "",todos:[]}
 
   addTodo = () =>{
     this.setState({ 
-      todos: this.state.todos.concat([this.state.inputValue])
+      todos: this.state.todos.concat([this.state.inputValue]),
+      inputValue: ''
     });
-    
   }
 
   updateInputValue = (evt)=> {
