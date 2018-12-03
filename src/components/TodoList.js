@@ -6,12 +6,21 @@ class TodoList extends Component{
 
   addTodo(){
 
+
+  }
+
+  updateInputValue: function(evt) {
+    this.setState({
+      inputValue: evt.target.value
+    });
   }
 
   render(){
     return (
     <div>
-      <input onClick={this.addTodo} type="text"></input>
+      <input  onClick={this.addTodo} 
+              value={this.state.inputValue} 
+              onChange={this.updateInputValue}></input>
       <button>add</button>
     </div>
     )
